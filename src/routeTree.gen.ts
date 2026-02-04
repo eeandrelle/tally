@@ -9,38 +9,1096 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WorkpapersRouteImport } from './routes/workpapers'
+import { Route as WfhExpensesRouteImport } from './routes/wfh-expenses'
+import { Route as WeeklyDigestRouteImport } from './routes/weekly-digest'
+import { Route as VehicleLogbookRouteImport } from './routes/vehicle-logbook'
+import { Route as UploadRemindersRouteImport } from './routes/upload-reminders'
+import { Route as UploadRouteImport } from './routes/upload'
+import { Route as TravelExpensesRouteImport } from './routes/travel-expenses'
+import { Route as TaxReportsRouteImport } from './routes/tax-reports'
+import { Route as TaxReportRouteImport } from './routes/tax-report'
+import { Route as TaxCategoriesRouteImport } from './routes/tax-categories'
+import { Route as TaxCalendarRouteImport } from './routes/tax-calendar'
+import { Route as TaxCalculatorRouteImport } from './routes/tax-calculator'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as SelfEducationRouteImport } from './routes/self-education'
+import { Route as RentalPropertyRouteImport } from './routes/rental-property'
+import { Route as RemindersRouteImport } from './routes/reminders'
+import { Route as ReceiptsRouteImport } from './routes/receipts'
+import { Route as OtherWorkExpensesRouteImport } from './routes/other-work-expenses'
+import { Route as NumberExtractionRouteImport } from './routes/number-extraction'
+import { Route as LowValuePoolRouteImport } from './routes/low-value-pool'
+import { Route as InvoicesRouteImport } from './routes/invoices'
+import { Route as IncomeDashboardRouteImport } from './routes/income-dashboard'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FrankingCreditsRouteImport } from './routes/franking-credits'
+import { Route as DocumentsRouteImport } from './routes/documents'
+import { Route as DocumentDetectionRouteImport } from './routes/document-detection'
+import { Route as DividendsRouteImport } from './routes/dividends'
+import { Route as DividendParserRouteImport } from './routes/dividend-parser'
+import { Route as DividendAlertsRouteImport } from './routes/dividend-alerts'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as D9TaxAffairsRouteImport } from './routes/d9-tax-affairs'
+import { Route as D8DonationsRouteImport } from './routes/d8-donations'
+import { Route as D7InterestDividendsRouteImport } from './routes/d7-interest-dividends'
+import { Route as D5ExpensesRouteImport } from './routes/d5-expenses'
+import { Route as D15OtherRouteImport } from './routes/d15-other'
+import { Route as D14ForestryRouteImport } from './routes/d14-forestry'
+import { Route as D13ProjectPoolRouteImport } from './routes/d13-project-pool'
+import { Route as D12SuperRouteImport } from './routes/d12-super'
+import { Route as D11UppRouteImport } from './routes/d11-upp'
+import { Route as D10MedicalRouteImport } from './routes/d10-medical'
+import { Route as ContractsRouteImport } from './routes/contracts'
+import { Route as ContextualQuestionsRouteImport } from './routes/contextual-questions'
+import { Route as CompletenessRouteImport } from './routes/completeness'
+import { Route as ClothingExpensesRouteImport } from './routes/clothing-expenses'
+import { Route as CategoryBreakdownRouteImport } from './routes/category-breakdown'
+import { Route as CategorizationSuggestionsRouteImport } from './routes/categorization-suggestions'
+import { Route as CarExpensesRouteImport } from './routes/car-expenses'
+import { Route as CameraRouteImport } from './routes/camera'
+import { Route as BankStatementsRouteImport } from './routes/bank-statements'
+import { Route as AtoPrefillRouteImport } from './routes/ato-prefill'
+import { Route as AtoCategoriesRouteImport } from './routes/ato-categories'
+import { Route as AnalyticsRouteImport } from './routes/analytics'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PortalTokenRouteImport } from './routes/portal.$token'
 
+const WorkpapersRoute = WorkpapersRouteImport.update({
+  id: '/workpapers',
+  path: '/workpapers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WfhExpensesRoute = WfhExpensesRouteImport.update({
+  id: '/wfh-expenses',
+  path: '/wfh-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WeeklyDigestRoute = WeeklyDigestRouteImport.update({
+  id: '/weekly-digest',
+  path: '/weekly-digest',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VehicleLogbookRoute = VehicleLogbookRouteImport.update({
+  id: '/vehicle-logbook',
+  path: '/vehicle-logbook',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UploadRemindersRoute = UploadRemindersRouteImport.update({
+  id: '/upload-reminders',
+  path: '/upload-reminders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UploadRoute = UploadRouteImport.update({
+  id: '/upload',
+  path: '/upload',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TravelExpensesRoute = TravelExpensesRouteImport.update({
+  id: '/travel-expenses',
+  path: '/travel-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxReportsRoute = TaxReportsRouteImport.update({
+  id: '/tax-reports',
+  path: '/tax-reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxReportRoute = TaxReportRouteImport.update({
+  id: '/tax-report',
+  path: '/tax-report',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxCategoriesRoute = TaxCategoriesRouteImport.update({
+  id: '/tax-categories',
+  path: '/tax-categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxCalendarRoute = TaxCalendarRouteImport.update({
+  id: '/tax-calendar',
+  path: '/tax-calendar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TaxCalculatorRoute = TaxCalculatorRouteImport.update({
+  id: '/tax-calculator',
+  path: '/tax-calculator',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SelfEducationRoute = SelfEducationRouteImport.update({
+  id: '/self-education',
+  path: '/self-education',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RentalPropertyRoute = RentalPropertyRouteImport.update({
+  id: '/rental-property',
+  path: '/rental-property',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RemindersRoute = RemindersRouteImport.update({
+  id: '/reminders',
+  path: '/reminders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReceiptsRoute = ReceiptsRouteImport.update({
+  id: '/receipts',
+  path: '/receipts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OtherWorkExpensesRoute = OtherWorkExpensesRouteImport.update({
+  id: '/other-work-expenses',
+  path: '/other-work-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NumberExtractionRoute = NumberExtractionRouteImport.update({
+  id: '/number-extraction',
+  path: '/number-extraction',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LowValuePoolRoute = LowValuePoolRouteImport.update({
+  id: '/low-value-pool',
+  path: '/low-value-pool',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvoicesRoute = InvoicesRouteImport.update({
+  id: '/invoices',
+  path: '/invoices',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IncomeDashboardRoute = IncomeDashboardRouteImport.update({
+  id: '/income-dashboard',
+  path: '/income-dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FrankingCreditsRoute = FrankingCreditsRouteImport.update({
+  id: '/franking-credits',
+  path: '/franking-credits',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentsRoute = DocumentsRouteImport.update({
+  id: '/documents',
+  path: '/documents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DocumentDetectionRoute = DocumentDetectionRouteImport.update({
+  id: '/document-detection',
+  path: '/document-detection',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DividendsRoute = DividendsRouteImport.update({
+  id: '/dividends',
+  path: '/dividends',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DividendParserRoute = DividendParserRouteImport.update({
+  id: '/dividend-parser',
+  path: '/dividend-parser',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DividendAlertsRoute = DividendAlertsRouteImport.update({
+  id: '/dividend-alerts',
+  path: '/dividend-alerts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D9TaxAffairsRoute = D9TaxAffairsRouteImport.update({
+  id: '/d9-tax-affairs',
+  path: '/d9-tax-affairs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D8DonationsRoute = D8DonationsRouteImport.update({
+  id: '/d8-donations',
+  path: '/d8-donations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D7InterestDividendsRoute = D7InterestDividendsRouteImport.update({
+  id: '/d7-interest-dividends',
+  path: '/d7-interest-dividends',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D5ExpensesRoute = D5ExpensesRouteImport.update({
+  id: '/d5-expenses',
+  path: '/d5-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D15OtherRoute = D15OtherRouteImport.update({
+  id: '/d15-other',
+  path: '/d15-other',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D14ForestryRoute = D14ForestryRouteImport.update({
+  id: '/d14-forestry',
+  path: '/d14-forestry',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D13ProjectPoolRoute = D13ProjectPoolRouteImport.update({
+  id: '/d13-project-pool',
+  path: '/d13-project-pool',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D12SuperRoute = D12SuperRouteImport.update({
+  id: '/d12-super',
+  path: '/d12-super',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D11UppRoute = D11UppRouteImport.update({
+  id: '/d11-upp',
+  path: '/d11-upp',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const D10MedicalRoute = D10MedicalRouteImport.update({
+  id: '/d10-medical',
+  path: '/d10-medical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContractsRoute = ContractsRouteImport.update({
+  id: '/contracts',
+  path: '/contracts',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContextualQuestionsRoute = ContextualQuestionsRouteImport.update({
+  id: '/contextual-questions',
+  path: '/contextual-questions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompletenessRoute = CompletenessRouteImport.update({
+  id: '/completeness',
+  path: '/completeness',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ClothingExpensesRoute = ClothingExpensesRouteImport.update({
+  id: '/clothing-expenses',
+  path: '/clothing-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategoryBreakdownRoute = CategoryBreakdownRouteImport.update({
+  id: '/category-breakdown',
+  path: '/category-breakdown',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CategorizationSuggestionsRoute =
+  CategorizationSuggestionsRouteImport.update({
+    id: '/categorization-suggestions',
+    path: '/categorization-suggestions',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CarExpensesRoute = CarExpensesRouteImport.update({
+  id: '/car-expenses',
+  path: '/car-expenses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CameraRoute = CameraRouteImport.update({
+  id: '/camera',
+  path: '/camera',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BankStatementsRoute = BankStatementsRouteImport.update({
+  id: '/bank-statements',
+  path: '/bank-statements',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtoPrefillRoute = AtoPrefillRouteImport.update({
+  id: '/ato-prefill',
+  path: '/ato-prefill',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AtoCategoriesRoute = AtoCategoriesRouteImport.update({
+  id: '/ato-categories',
+  path: '/ato-categories',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AnalyticsRoute = AnalyticsRouteImport.update({
+  id: '/analytics',
+  path: '/analytics',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PortalTokenRoute = PortalTokenRouteImport.update({
+  id: '/portal/$token',
+  path: '/portal/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/ato-categories': typeof AtoCategoriesRoute
+  '/ato-prefill': typeof AtoPrefillRoute
+  '/bank-statements': typeof BankStatementsRoute
+  '/camera': typeof CameraRoute
+  '/car-expenses': typeof CarExpensesRoute
+  '/categorization-suggestions': typeof CategorizationSuggestionsRoute
+  '/category-breakdown': typeof CategoryBreakdownRoute
+  '/clothing-expenses': typeof ClothingExpensesRoute
+  '/completeness': typeof CompletenessRoute
+  '/contextual-questions': typeof ContextualQuestionsRoute
+  '/contracts': typeof ContractsRoute
+  '/d10-medical': typeof D10MedicalRoute
+  '/d11-upp': typeof D11UppRoute
+  '/d12-super': typeof D12SuperRoute
+  '/d13-project-pool': typeof D13ProjectPoolRoute
+  '/d14-forestry': typeof D14ForestryRoute
+  '/d15-other': typeof D15OtherRoute
+  '/d5-expenses': typeof D5ExpensesRoute
+  '/d7-interest-dividends': typeof D7InterestDividendsRoute
+  '/d8-donations': typeof D8DonationsRoute
+  '/d9-tax-affairs': typeof D9TaxAffairsRoute
+  '/dashboard': typeof DashboardRoute
+  '/dividend-alerts': typeof DividendAlertsRoute
+  '/dividend-parser': typeof DividendParserRoute
+  '/dividends': typeof DividendsRoute
+  '/document-detection': typeof DocumentDetectionRoute
+  '/documents': typeof DocumentsRoute
+  '/franking-credits': typeof FrankingCreditsRoute
+  '/gallery': typeof GalleryRoute
+  '/income-dashboard': typeof IncomeDashboardRoute
+  '/invoices': typeof InvoicesRoute
+  '/low-value-pool': typeof LowValuePoolRoute
+  '/number-extraction': typeof NumberExtractionRoute
+  '/other-work-expenses': typeof OtherWorkExpensesRoute
+  '/receipts': typeof ReceiptsRoute
+  '/reminders': typeof RemindersRoute
+  '/rental-property': typeof RentalPropertyRoute
+  '/self-education': typeof SelfEducationRoute
+  '/settings': typeof SettingsRoute
+  '/tax-calculator': typeof TaxCalculatorRoute
+  '/tax-calendar': typeof TaxCalendarRoute
+  '/tax-categories': typeof TaxCategoriesRoute
+  '/tax-report': typeof TaxReportRoute
+  '/tax-reports': typeof TaxReportsRoute
+  '/travel-expenses': typeof TravelExpensesRoute
+  '/upload': typeof UploadRoute
+  '/upload-reminders': typeof UploadRemindersRoute
+  '/vehicle-logbook': typeof VehicleLogbookRoute
+  '/weekly-digest': typeof WeeklyDigestRoute
+  '/wfh-expenses': typeof WfhExpensesRoute
+  '/workpapers': typeof WorkpapersRoute
+  '/portal/$token': typeof PortalTokenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/ato-categories': typeof AtoCategoriesRoute
+  '/ato-prefill': typeof AtoPrefillRoute
+  '/bank-statements': typeof BankStatementsRoute
+  '/camera': typeof CameraRoute
+  '/car-expenses': typeof CarExpensesRoute
+  '/categorization-suggestions': typeof CategorizationSuggestionsRoute
+  '/category-breakdown': typeof CategoryBreakdownRoute
+  '/clothing-expenses': typeof ClothingExpensesRoute
+  '/completeness': typeof CompletenessRoute
+  '/contextual-questions': typeof ContextualQuestionsRoute
+  '/contracts': typeof ContractsRoute
+  '/d10-medical': typeof D10MedicalRoute
+  '/d11-upp': typeof D11UppRoute
+  '/d12-super': typeof D12SuperRoute
+  '/d13-project-pool': typeof D13ProjectPoolRoute
+  '/d14-forestry': typeof D14ForestryRoute
+  '/d15-other': typeof D15OtherRoute
+  '/d5-expenses': typeof D5ExpensesRoute
+  '/d7-interest-dividends': typeof D7InterestDividendsRoute
+  '/d8-donations': typeof D8DonationsRoute
+  '/d9-tax-affairs': typeof D9TaxAffairsRoute
+  '/dashboard': typeof DashboardRoute
+  '/dividend-alerts': typeof DividendAlertsRoute
+  '/dividend-parser': typeof DividendParserRoute
+  '/dividends': typeof DividendsRoute
+  '/document-detection': typeof DocumentDetectionRoute
+  '/documents': typeof DocumentsRoute
+  '/franking-credits': typeof FrankingCreditsRoute
+  '/gallery': typeof GalleryRoute
+  '/income-dashboard': typeof IncomeDashboardRoute
+  '/invoices': typeof InvoicesRoute
+  '/low-value-pool': typeof LowValuePoolRoute
+  '/number-extraction': typeof NumberExtractionRoute
+  '/other-work-expenses': typeof OtherWorkExpensesRoute
+  '/receipts': typeof ReceiptsRoute
+  '/reminders': typeof RemindersRoute
+  '/rental-property': typeof RentalPropertyRoute
+  '/self-education': typeof SelfEducationRoute
+  '/settings': typeof SettingsRoute
+  '/tax-calculator': typeof TaxCalculatorRoute
+  '/tax-calendar': typeof TaxCalendarRoute
+  '/tax-categories': typeof TaxCategoriesRoute
+  '/tax-report': typeof TaxReportRoute
+  '/tax-reports': typeof TaxReportsRoute
+  '/travel-expenses': typeof TravelExpensesRoute
+  '/upload': typeof UploadRoute
+  '/upload-reminders': typeof UploadRemindersRoute
+  '/vehicle-logbook': typeof VehicleLogbookRoute
+  '/weekly-digest': typeof WeeklyDigestRoute
+  '/wfh-expenses': typeof WfhExpensesRoute
+  '/workpapers': typeof WorkpapersRoute
+  '/portal/$token': typeof PortalTokenRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/analytics': typeof AnalyticsRoute
+  '/ato-categories': typeof AtoCategoriesRoute
+  '/ato-prefill': typeof AtoPrefillRoute
+  '/bank-statements': typeof BankStatementsRoute
+  '/camera': typeof CameraRoute
+  '/car-expenses': typeof CarExpensesRoute
+  '/categorization-suggestions': typeof CategorizationSuggestionsRoute
+  '/category-breakdown': typeof CategoryBreakdownRoute
+  '/clothing-expenses': typeof ClothingExpensesRoute
+  '/completeness': typeof CompletenessRoute
+  '/contextual-questions': typeof ContextualQuestionsRoute
+  '/contracts': typeof ContractsRoute
+  '/d10-medical': typeof D10MedicalRoute
+  '/d11-upp': typeof D11UppRoute
+  '/d12-super': typeof D12SuperRoute
+  '/d13-project-pool': typeof D13ProjectPoolRoute
+  '/d14-forestry': typeof D14ForestryRoute
+  '/d15-other': typeof D15OtherRoute
+  '/d5-expenses': typeof D5ExpensesRoute
+  '/d7-interest-dividends': typeof D7InterestDividendsRoute
+  '/d8-donations': typeof D8DonationsRoute
+  '/d9-tax-affairs': typeof D9TaxAffairsRoute
+  '/dashboard': typeof DashboardRoute
+  '/dividend-alerts': typeof DividendAlertsRoute
+  '/dividend-parser': typeof DividendParserRoute
+  '/dividends': typeof DividendsRoute
+  '/document-detection': typeof DocumentDetectionRoute
+  '/documents': typeof DocumentsRoute
+  '/franking-credits': typeof FrankingCreditsRoute
+  '/gallery': typeof GalleryRoute
+  '/income-dashboard': typeof IncomeDashboardRoute
+  '/invoices': typeof InvoicesRoute
+  '/low-value-pool': typeof LowValuePoolRoute
+  '/number-extraction': typeof NumberExtractionRoute
+  '/other-work-expenses': typeof OtherWorkExpensesRoute
+  '/receipts': typeof ReceiptsRoute
+  '/reminders': typeof RemindersRoute
+  '/rental-property': typeof RentalPropertyRoute
+  '/self-education': typeof SelfEducationRoute
+  '/settings': typeof SettingsRoute
+  '/tax-calculator': typeof TaxCalculatorRoute
+  '/tax-calendar': typeof TaxCalendarRoute
+  '/tax-categories': typeof TaxCategoriesRoute
+  '/tax-report': typeof TaxReportRoute
+  '/tax-reports': typeof TaxReportsRoute
+  '/travel-expenses': typeof TravelExpensesRoute
+  '/upload': typeof UploadRoute
+  '/upload-reminders': typeof UploadRemindersRoute
+  '/vehicle-logbook': typeof VehicleLogbookRoute
+  '/weekly-digest': typeof WeeklyDigestRoute
+  '/wfh-expenses': typeof WfhExpensesRoute
+  '/workpapers': typeof WorkpapersRoute
+  '/portal/$token': typeof PortalTokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/analytics'
+    | '/ato-categories'
+    | '/ato-prefill'
+    | '/bank-statements'
+    | '/camera'
+    | '/car-expenses'
+    | '/categorization-suggestions'
+    | '/category-breakdown'
+    | '/clothing-expenses'
+    | '/completeness'
+    | '/contextual-questions'
+    | '/contracts'
+    | '/d10-medical'
+    | '/d11-upp'
+    | '/d12-super'
+    | '/d13-project-pool'
+    | '/d14-forestry'
+    | '/d15-other'
+    | '/d5-expenses'
+    | '/d7-interest-dividends'
+    | '/d8-donations'
+    | '/d9-tax-affairs'
+    | '/dashboard'
+    | '/dividend-alerts'
+    | '/dividend-parser'
+    | '/dividends'
+    | '/document-detection'
+    | '/documents'
+    | '/franking-credits'
+    | '/gallery'
+    | '/income-dashboard'
+    | '/invoices'
+    | '/low-value-pool'
+    | '/number-extraction'
+    | '/other-work-expenses'
+    | '/receipts'
+    | '/reminders'
+    | '/rental-property'
+    | '/self-education'
+    | '/settings'
+    | '/tax-calculator'
+    | '/tax-calendar'
+    | '/tax-categories'
+    | '/tax-report'
+    | '/tax-reports'
+    | '/travel-expenses'
+    | '/upload'
+    | '/upload-reminders'
+    | '/vehicle-logbook'
+    | '/weekly-digest'
+    | '/wfh-expenses'
+    | '/workpapers'
+    | '/portal/$token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/analytics'
+    | '/ato-categories'
+    | '/ato-prefill'
+    | '/bank-statements'
+    | '/camera'
+    | '/car-expenses'
+    | '/categorization-suggestions'
+    | '/category-breakdown'
+    | '/clothing-expenses'
+    | '/completeness'
+    | '/contextual-questions'
+    | '/contracts'
+    | '/d10-medical'
+    | '/d11-upp'
+    | '/d12-super'
+    | '/d13-project-pool'
+    | '/d14-forestry'
+    | '/d15-other'
+    | '/d5-expenses'
+    | '/d7-interest-dividends'
+    | '/d8-donations'
+    | '/d9-tax-affairs'
+    | '/dashboard'
+    | '/dividend-alerts'
+    | '/dividend-parser'
+    | '/dividends'
+    | '/document-detection'
+    | '/documents'
+    | '/franking-credits'
+    | '/gallery'
+    | '/income-dashboard'
+    | '/invoices'
+    | '/low-value-pool'
+    | '/number-extraction'
+    | '/other-work-expenses'
+    | '/receipts'
+    | '/reminders'
+    | '/rental-property'
+    | '/self-education'
+    | '/settings'
+    | '/tax-calculator'
+    | '/tax-calendar'
+    | '/tax-categories'
+    | '/tax-report'
+    | '/tax-reports'
+    | '/travel-expenses'
+    | '/upload'
+    | '/upload-reminders'
+    | '/vehicle-logbook'
+    | '/weekly-digest'
+    | '/wfh-expenses'
+    | '/workpapers'
+    | '/portal/$token'
+  id:
+    | '__root__'
+    | '/'
+    | '/analytics'
+    | '/ato-categories'
+    | '/ato-prefill'
+    | '/bank-statements'
+    | '/camera'
+    | '/car-expenses'
+    | '/categorization-suggestions'
+    | '/category-breakdown'
+    | '/clothing-expenses'
+    | '/completeness'
+    | '/contextual-questions'
+    | '/contracts'
+    | '/d10-medical'
+    | '/d11-upp'
+    | '/d12-super'
+    | '/d13-project-pool'
+    | '/d14-forestry'
+    | '/d15-other'
+    | '/d5-expenses'
+    | '/d7-interest-dividends'
+    | '/d8-donations'
+    | '/d9-tax-affairs'
+    | '/dashboard'
+    | '/dividend-alerts'
+    | '/dividend-parser'
+    | '/dividends'
+    | '/document-detection'
+    | '/documents'
+    | '/franking-credits'
+    | '/gallery'
+    | '/income-dashboard'
+    | '/invoices'
+    | '/low-value-pool'
+    | '/number-extraction'
+    | '/other-work-expenses'
+    | '/receipts'
+    | '/reminders'
+    | '/rental-property'
+    | '/self-education'
+    | '/settings'
+    | '/tax-calculator'
+    | '/tax-calendar'
+    | '/tax-categories'
+    | '/tax-report'
+    | '/tax-reports'
+    | '/travel-expenses'
+    | '/upload'
+    | '/upload-reminders'
+    | '/vehicle-logbook'
+    | '/weekly-digest'
+    | '/wfh-expenses'
+    | '/workpapers'
+    | '/portal/$token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AnalyticsRoute: typeof AnalyticsRoute
+  AtoCategoriesRoute: typeof AtoCategoriesRoute
+  AtoPrefillRoute: typeof AtoPrefillRoute
+  BankStatementsRoute: typeof BankStatementsRoute
+  CameraRoute: typeof CameraRoute
+  CarExpensesRoute: typeof CarExpensesRoute
+  CategorizationSuggestionsRoute: typeof CategorizationSuggestionsRoute
+  CategoryBreakdownRoute: typeof CategoryBreakdownRoute
+  ClothingExpensesRoute: typeof ClothingExpensesRoute
+  CompletenessRoute: typeof CompletenessRoute
+  ContextualQuestionsRoute: typeof ContextualQuestionsRoute
+  ContractsRoute: typeof ContractsRoute
+  D10MedicalRoute: typeof D10MedicalRoute
+  D11UppRoute: typeof D11UppRoute
+  D12SuperRoute: typeof D12SuperRoute
+  D13ProjectPoolRoute: typeof D13ProjectPoolRoute
+  D14ForestryRoute: typeof D14ForestryRoute
+  D15OtherRoute: typeof D15OtherRoute
+  D5ExpensesRoute: typeof D5ExpensesRoute
+  D7InterestDividendsRoute: typeof D7InterestDividendsRoute
+  D8DonationsRoute: typeof D8DonationsRoute
+  D9TaxAffairsRoute: typeof D9TaxAffairsRoute
+  DashboardRoute: typeof DashboardRoute
+  DividendAlertsRoute: typeof DividendAlertsRoute
+  DividendParserRoute: typeof DividendParserRoute
+  DividendsRoute: typeof DividendsRoute
+  DocumentDetectionRoute: typeof DocumentDetectionRoute
+  DocumentsRoute: typeof DocumentsRoute
+  FrankingCreditsRoute: typeof FrankingCreditsRoute
+  GalleryRoute: typeof GalleryRoute
+  IncomeDashboardRoute: typeof IncomeDashboardRoute
+  InvoicesRoute: typeof InvoicesRoute
+  LowValuePoolRoute: typeof LowValuePoolRoute
+  NumberExtractionRoute: typeof NumberExtractionRoute
+  OtherWorkExpensesRoute: typeof OtherWorkExpensesRoute
+  ReceiptsRoute: typeof ReceiptsRoute
+  RemindersRoute: typeof RemindersRoute
+  RentalPropertyRoute: typeof RentalPropertyRoute
+  SelfEducationRoute: typeof SelfEducationRoute
+  SettingsRoute: typeof SettingsRoute
+  TaxCalculatorRoute: typeof TaxCalculatorRoute
+  TaxCalendarRoute: typeof TaxCalendarRoute
+  TaxCategoriesRoute: typeof TaxCategoriesRoute
+  TaxReportRoute: typeof TaxReportRoute
+  TaxReportsRoute: typeof TaxReportsRoute
+  TravelExpensesRoute: typeof TravelExpensesRoute
+  UploadRoute: typeof UploadRoute
+  UploadRemindersRoute: typeof UploadRemindersRoute
+  VehicleLogbookRoute: typeof VehicleLogbookRoute
+  WeeklyDigestRoute: typeof WeeklyDigestRoute
+  WfhExpensesRoute: typeof WfhExpensesRoute
+  WorkpapersRoute: typeof WorkpapersRoute
+  PortalTokenRoute: typeof PortalTokenRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/workpapers': {
+      id: '/workpapers'
+      path: '/workpapers'
+      fullPath: '/workpapers'
+      preLoaderRoute: typeof WorkpapersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wfh-expenses': {
+      id: '/wfh-expenses'
+      path: '/wfh-expenses'
+      fullPath: '/wfh-expenses'
+      preLoaderRoute: typeof WfhExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/weekly-digest': {
+      id: '/weekly-digest'
+      path: '/weekly-digest'
+      fullPath: '/weekly-digest'
+      preLoaderRoute: typeof WeeklyDigestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vehicle-logbook': {
+      id: '/vehicle-logbook'
+      path: '/vehicle-logbook'
+      fullPath: '/vehicle-logbook'
+      preLoaderRoute: typeof VehicleLogbookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upload-reminders': {
+      id: '/upload-reminders'
+      path: '/upload-reminders'
+      fullPath: '/upload-reminders'
+      preLoaderRoute: typeof UploadRemindersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/upload': {
+      id: '/upload'
+      path: '/upload'
+      fullPath: '/upload'
+      preLoaderRoute: typeof UploadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/travel-expenses': {
+      id: '/travel-expenses'
+      path: '/travel-expenses'
+      fullPath: '/travel-expenses'
+      preLoaderRoute: typeof TravelExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-reports': {
+      id: '/tax-reports'
+      path: '/tax-reports'
+      fullPath: '/tax-reports'
+      preLoaderRoute: typeof TaxReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-report': {
+      id: '/tax-report'
+      path: '/tax-report'
+      fullPath: '/tax-report'
+      preLoaderRoute: typeof TaxReportRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-categories': {
+      id: '/tax-categories'
+      path: '/tax-categories'
+      fullPath: '/tax-categories'
+      preLoaderRoute: typeof TaxCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-calendar': {
+      id: '/tax-calendar'
+      path: '/tax-calendar'
+      fullPath: '/tax-calendar'
+      preLoaderRoute: typeof TaxCalendarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/tax-calculator': {
+      id: '/tax-calculator'
+      path: '/tax-calculator'
+      fullPath: '/tax-calculator'
+      preLoaderRoute: typeof TaxCalculatorRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/self-education': {
+      id: '/self-education'
+      path: '/self-education'
+      fullPath: '/self-education'
+      preLoaderRoute: typeof SelfEducationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rental-property': {
+      id: '/rental-property'
+      path: '/rental-property'
+      fullPath: '/rental-property'
+      preLoaderRoute: typeof RentalPropertyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reminders': {
+      id: '/reminders'
+      path: '/reminders'
+      fullPath: '/reminders'
+      preLoaderRoute: typeof RemindersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/receipts': {
+      id: '/receipts'
+      path: '/receipts'
+      fullPath: '/receipts'
+      preLoaderRoute: typeof ReceiptsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/other-work-expenses': {
+      id: '/other-work-expenses'
+      path: '/other-work-expenses'
+      fullPath: '/other-work-expenses'
+      preLoaderRoute: typeof OtherWorkExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/number-extraction': {
+      id: '/number-extraction'
+      path: '/number-extraction'
+      fullPath: '/number-extraction'
+      preLoaderRoute: typeof NumberExtractionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/low-value-pool': {
+      id: '/low-value-pool'
+      path: '/low-value-pool'
+      fullPath: '/low-value-pool'
+      preLoaderRoute: typeof LowValuePoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/invoices': {
+      id: '/invoices'
+      path: '/invoices'
+      fullPath: '/invoices'
+      preLoaderRoute: typeof InvoicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/income-dashboard': {
+      id: '/income-dashboard'
+      path: '/income-dashboard'
+      fullPath: '/income-dashboard'
+      preLoaderRoute: typeof IncomeDashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/franking-credits': {
+      id: '/franking-credits'
+      path: '/franking-credits'
+      fullPath: '/franking-credits'
+      preLoaderRoute: typeof FrankingCreditsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/documents': {
+      id: '/documents'
+      path: '/documents'
+      fullPath: '/documents'
+      preLoaderRoute: typeof DocumentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/document-detection': {
+      id: '/document-detection'
+      path: '/document-detection'
+      fullPath: '/document-detection'
+      preLoaderRoute: typeof DocumentDetectionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dividends': {
+      id: '/dividends'
+      path: '/dividends'
+      fullPath: '/dividends'
+      preLoaderRoute: typeof DividendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dividend-parser': {
+      id: '/dividend-parser'
+      path: '/dividend-parser'
+      fullPath: '/dividend-parser'
+      preLoaderRoute: typeof DividendParserRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dividend-alerts': {
+      id: '/dividend-alerts'
+      path: '/dividend-alerts'
+      fullPath: '/dividend-alerts'
+      preLoaderRoute: typeof DividendAlertsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d9-tax-affairs': {
+      id: '/d9-tax-affairs'
+      path: '/d9-tax-affairs'
+      fullPath: '/d9-tax-affairs'
+      preLoaderRoute: typeof D9TaxAffairsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d8-donations': {
+      id: '/d8-donations'
+      path: '/d8-donations'
+      fullPath: '/d8-donations'
+      preLoaderRoute: typeof D8DonationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d7-interest-dividends': {
+      id: '/d7-interest-dividends'
+      path: '/d7-interest-dividends'
+      fullPath: '/d7-interest-dividends'
+      preLoaderRoute: typeof D7InterestDividendsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d5-expenses': {
+      id: '/d5-expenses'
+      path: '/d5-expenses'
+      fullPath: '/d5-expenses'
+      preLoaderRoute: typeof D5ExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d15-other': {
+      id: '/d15-other'
+      path: '/d15-other'
+      fullPath: '/d15-other'
+      preLoaderRoute: typeof D15OtherRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d14-forestry': {
+      id: '/d14-forestry'
+      path: '/d14-forestry'
+      fullPath: '/d14-forestry'
+      preLoaderRoute: typeof D14ForestryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d13-project-pool': {
+      id: '/d13-project-pool'
+      path: '/d13-project-pool'
+      fullPath: '/d13-project-pool'
+      preLoaderRoute: typeof D13ProjectPoolRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d12-super': {
+      id: '/d12-super'
+      path: '/d12-super'
+      fullPath: '/d12-super'
+      preLoaderRoute: typeof D12SuperRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d11-upp': {
+      id: '/d11-upp'
+      path: '/d11-upp'
+      fullPath: '/d11-upp'
+      preLoaderRoute: typeof D11UppRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/d10-medical': {
+      id: '/d10-medical'
+      path: '/d10-medical'
+      fullPath: '/d10-medical'
+      preLoaderRoute: typeof D10MedicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contracts': {
+      id: '/contracts'
+      path: '/contracts'
+      fullPath: '/contracts'
+      preLoaderRoute: typeof ContractsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contextual-questions': {
+      id: '/contextual-questions'
+      path: '/contextual-questions'
+      fullPath: '/contextual-questions'
+      preLoaderRoute: typeof ContextualQuestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/completeness': {
+      id: '/completeness'
+      path: '/completeness'
+      fullPath: '/completeness'
+      preLoaderRoute: typeof CompletenessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/clothing-expenses': {
+      id: '/clothing-expenses'
+      path: '/clothing-expenses'
+      fullPath: '/clothing-expenses'
+      preLoaderRoute: typeof ClothingExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/category-breakdown': {
+      id: '/category-breakdown'
+      path: '/category-breakdown'
+      fullPath: '/category-breakdown'
+      preLoaderRoute: typeof CategoryBreakdownRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/categorization-suggestions': {
+      id: '/categorization-suggestions'
+      path: '/categorization-suggestions'
+      fullPath: '/categorization-suggestions'
+      preLoaderRoute: typeof CategorizationSuggestionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/car-expenses': {
+      id: '/car-expenses'
+      path: '/car-expenses'
+      fullPath: '/car-expenses'
+      preLoaderRoute: typeof CarExpensesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/camera': {
+      id: '/camera'
+      path: '/camera'
+      fullPath: '/camera'
+      preLoaderRoute: typeof CameraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bank-statements': {
+      id: '/bank-statements'
+      path: '/bank-statements'
+      fullPath: '/bank-statements'
+      preLoaderRoute: typeof BankStatementsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ato-prefill': {
+      id: '/ato-prefill'
+      path: '/ato-prefill'
+      fullPath: '/ato-prefill'
+      preLoaderRoute: typeof AtoPrefillRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ato-categories': {
+      id: '/ato-categories'
+      path: '/ato-categories'
+      fullPath: '/ato-categories'
+      preLoaderRoute: typeof AtoCategoriesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/analytics': {
+      id: '/analytics'
+      path: '/analytics'
+      fullPath: '/analytics'
+      preLoaderRoute: typeof AnalyticsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +1106,71 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/portal/$token': {
+      id: '/portal/$token'
+      path: '/portal/$token'
+      fullPath: '/portal/$token'
+      preLoaderRoute: typeof PortalTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AnalyticsRoute: AnalyticsRoute,
+  AtoCategoriesRoute: AtoCategoriesRoute,
+  AtoPrefillRoute: AtoPrefillRoute,
+  BankStatementsRoute: BankStatementsRoute,
+  CameraRoute: CameraRoute,
+  CarExpensesRoute: CarExpensesRoute,
+  CategorizationSuggestionsRoute: CategorizationSuggestionsRoute,
+  CategoryBreakdownRoute: CategoryBreakdownRoute,
+  ClothingExpensesRoute: ClothingExpensesRoute,
+  CompletenessRoute: CompletenessRoute,
+  ContextualQuestionsRoute: ContextualQuestionsRoute,
+  ContractsRoute: ContractsRoute,
+  D10MedicalRoute: D10MedicalRoute,
+  D11UppRoute: D11UppRoute,
+  D12SuperRoute: D12SuperRoute,
+  D13ProjectPoolRoute: D13ProjectPoolRoute,
+  D14ForestryRoute: D14ForestryRoute,
+  D15OtherRoute: D15OtherRoute,
+  D5ExpensesRoute: D5ExpensesRoute,
+  D7InterestDividendsRoute: D7InterestDividendsRoute,
+  D8DonationsRoute: D8DonationsRoute,
+  D9TaxAffairsRoute: D9TaxAffairsRoute,
+  DashboardRoute: DashboardRoute,
+  DividendAlertsRoute: DividendAlertsRoute,
+  DividendParserRoute: DividendParserRoute,
+  DividendsRoute: DividendsRoute,
+  DocumentDetectionRoute: DocumentDetectionRoute,
+  DocumentsRoute: DocumentsRoute,
+  FrankingCreditsRoute: FrankingCreditsRoute,
+  GalleryRoute: GalleryRoute,
+  IncomeDashboardRoute: IncomeDashboardRoute,
+  InvoicesRoute: InvoicesRoute,
+  LowValuePoolRoute: LowValuePoolRoute,
+  NumberExtractionRoute: NumberExtractionRoute,
+  OtherWorkExpensesRoute: OtherWorkExpensesRoute,
+  ReceiptsRoute: ReceiptsRoute,
+  RemindersRoute: RemindersRoute,
+  RentalPropertyRoute: RentalPropertyRoute,
+  SelfEducationRoute: SelfEducationRoute,
+  SettingsRoute: SettingsRoute,
+  TaxCalculatorRoute: TaxCalculatorRoute,
+  TaxCalendarRoute: TaxCalendarRoute,
+  TaxCategoriesRoute: TaxCategoriesRoute,
+  TaxReportRoute: TaxReportRoute,
+  TaxReportsRoute: TaxReportsRoute,
+  TravelExpensesRoute: TravelExpensesRoute,
+  UploadRoute: UploadRoute,
+  UploadRemindersRoute: UploadRemindersRoute,
+  VehicleLogbookRoute: VehicleLogbookRoute,
+  WeeklyDigestRoute: WeeklyDigestRoute,
+  WfhExpensesRoute: WfhExpensesRoute,
+  WorkpapersRoute: WorkpapersRoute,
+  PortalTokenRoute: PortalTokenRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

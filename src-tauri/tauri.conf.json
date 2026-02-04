@@ -26,7 +26,19 @@
       }
     ],
     "security": {
-      "csp": null
+      "csp": null,
+      "capabilities": [
+        {
+          "identifier": "default",
+          "windows": ["main"],
+          "permissions": [
+            "fs:allow-read-file",
+            "fs:allow-read-dir",
+            "fs:allow-app-read",
+            "fs:allow-app-write"
+          ]
+        }
+      ]
     }
   },
   "bundle": {
@@ -41,8 +53,8 @@
     ]
   },
   "plugins": {
-    "sql": {
-      "preload": ["sqlite:default.db"]
+    "fs": {
+      "requireLiteralLeadingDot": false
     }
   }
 }

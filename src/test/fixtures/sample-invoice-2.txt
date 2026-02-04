@@ -1,0 +1,22 @@
+Tech Solutions Ltd
+A.B.N. 98 765 432 109
+
+INVOICE #TS-2024-0558
+
+Date: 22/03/2024
+Due: 22/04/2024 (30 days)
+
+To:
+Acme Corporation
+Attn: Accounts Payable
+
+Items:
+1. Web Development Services........................$5,000.00
+2. Hosting (Annual)................................$1,200.00
+3. Domain Registration...............................$50.00
+
+Subtotal: $6,250.00
+GST: $625.00
+Total: $6,875.00
+
+ABN: 98 765 432 109

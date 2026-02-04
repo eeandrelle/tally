@@ -2,6 +2,7 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { Toaster } from 'sonner'
+import { TaxYearProvider } from '@/contexts/TaxYearContext'
 
 import appCss from '../styles.css?url'
 
@@ -16,7 +17,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Tally Desktop - Tax Receipt Management',
       },
     ],
     links: [
@@ -37,7 +38,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <TaxYearProvider>
+          {children}
+        </TaxYearProvider>
         <Toaster position="top-right" richColors />
         <TanStackDevtools
           config={{

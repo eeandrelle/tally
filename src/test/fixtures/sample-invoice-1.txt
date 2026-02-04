@@ -1,0 +1,37 @@
+ABC CONSULTING PTY LTD
+ABN: 51 824 753 556
+123 Business Street
+Sydney NSW 2000
+Phone: (02) 1234 5678
+
+TAX INVOICE
+
+Invoice Number: INV-2024-001
+Invoice Date: 15 January 2024
+Due Date: 14 February 2024
+Payment Terms: Net 30 days
+
+Bill To:
+John Smith
+456 Client Avenue
+Melbourne VIC 3000
+
+------------------------------------------------------------------
+Description                              Qty    Unit Price    Total
+------------------------------------------------------------------
+Consulting Services - Project Alpha       10      $150.00   $1,500.00
+Software License                           1      $500.00     $500.00
+Support Package (Monthly)                  3      $200.00     $600.00
+------------------------------------------------------------------
+                                                           ----------
+Subtotal                                                      $2,600.00
+GST (10%)                                                       $260.00
+                                                           ----------
+TOTAL AMOUNT DUE                                            $2,860.00
+                                                           ==========
+
+Payment Methods:
+Bank Transfer: BSB 062-000 Account 12345678
+Reference: INV-2024-001
+
+Thank you for your business!
