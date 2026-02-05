@@ -109,3 +109,6 @@ export type {
   TransactionPreviewData,
   ConnectionStep,
 } from './bank-connection'
+
+// Layout components
+export { AppShell, useAppShell, Breadcrumbs, PageHeader } from './layout'
