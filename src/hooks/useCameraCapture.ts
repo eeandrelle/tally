@@ -713,34 +713,35 @@ export async function saveCapturedImage(
 }
 
 /**
- * Process captured image with OCR
+ * Process captured image with OCR using Tauri
  */
 export async function processCapturedImage(
-  image: CapturedImage
-): Promise<{ text: string; confidence: number }> {
+  image: CapturedImage,
+  imagePath?: string
+): Promise<{ text: string; confidence: number; vendor?: string; amount?: number; date?: string }> {
   try {
-    // Convert to file for OCR processing
-    const file = new File([image.blob], "capture.jpg", { type: "image/jpeg" });
+    // If we have an image path, use Tauri OCR
+    if (imagePath) {
+      const { invoke } = await import('@tauri-apps/api/core');
+      const result = await invoke<{
+        vendor: { value: string; confidence: number };
+        date: { value: string; confidence: number };
+        total_amount: { value: number; confidence: number };
+        raw_text: string;
+        overall_confidence: number;
+      }>('scan_receipt_ocr', { imagePath });
 
-    // Create FormData
-    const formData = new FormData();
-    formData.append("image", file);
-
-    // Send to OCR endpoint
-    const response = await fetch("/api/ocr", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (!response.ok) {
-      throw new Error("OCR processing failed");
+      return {
+        text: result.raw_text,
+        confidence: result.overall_confidence,
+        vendor: result.vendor.value,
+        amount: result.total_amount.value,
+        date: result.date.value,
+      };
     }
 
-    const result = await response.json();
-    return {
-      text: result.text || "",
-      confidence: result.confidence || 0,
-    };
+    // Fallback: return empty result if no path available
+    return { text: "", confidence: 0 };
   } catch (error) {
     console.error("OCR processing failed:", error);
     return { text: "", confidence: 0 };

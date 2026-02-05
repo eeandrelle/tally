@@ -1,7 +1,7 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "tally",
-  "version": "0.1.0",
+  "productName": "Tally",
+  "version": "1.0.0",
   "identifier": "com.tally.desktop",
   "build": {
     "frontendDist": "../dist",
@@ -13,10 +13,10 @@
     "windows": [
       {
         "title": "Tally",
-        "width": 1200,
-        "height": 800,
-        "minWidth": 900,
-        "minHeight": 600,
+        "width": 1400,
+        "height": 900,
+        "minWidth": 1024,
+        "minHeight": 700,
         "resizable": true,
         "fullscreen": false,
         "center": true,
@@ -32,10 +32,11 @@
           "identifier": "default",
           "windows": ["main"],
           "permissions": [
-            "fs:allow-read-file",
-            "fs:allow-read-dir",
-            "fs:allow-app-read",
-            "fs:allow-app-write"
+            "fs:default",
+            "sql:allow-load",
+            "sql:allow-execute",
+            "sql:allow-select",
+            "http:default"
           ]
         }
       ]
@@ -50,11 +51,19 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "category": "Finance",
+    "shortDescription": "Australian Tax Receipt Management",
+    "longDescription": "Tally helps Australian taxpayers track receipts, manage deductions, and prepare tax returns with ATO-compliant workpapers.",
+    "publisher": "Tally",
+    "copyright": "© 2025 Tally"
   },
   "plugins": {
     "fs": {
       "requireLiteralLeadingDot": false
+    },
+    "sql": {
+      "preload": ["sqlite:default.db"]
     }
   }
 }

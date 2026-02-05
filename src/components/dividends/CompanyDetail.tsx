@@ -25,7 +25,7 @@ import {
   Receipt,
   BarChart3,
   History,
-  PieChart,
+  PieChart as PieChartIcon,
   DollarSign
 } from 'lucide-react';
 import type { CompanyDividendSummary, DividendPayment } from '@/lib/dividend-tracker';
@@ -544,7 +544,7 @@ export function CompanyDetail({ company, payments, onBack }: CompanyDetailProps)
             Pattern
           </TabsTrigger>
           <TabsTrigger value="franking" className="gap-2">
-            <PieChart className="h-4 w-4" />
+            <PieChartIcon className="h-4 w-4" />
             Franking
           </TabsTrigger>
           <TabsTrigger value="annual" className="gap-2">
@@ -603,7 +603,7 @@ export function CompanyDetail({ company, payments, onBack }: CompanyDetailProps)
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <PieChart className="h-5 w-5" />
+                <PieChartIcon className="h-5 w-5" />
                 Franking Credit Breakdown
               </CardTitle>
               <CardDescription>

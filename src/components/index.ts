@@ -53,3 +53,59 @@ export type {
   KeyDate,
   ContractClause,
 } from '../lib/contracts'
+
+// TOS-207: Tally Beta UI Polish Components
+export { FeedbackWidget } from './feedback/FeedbackWidget'
+export { 
+  BetaBadge, 
+  BetaBanner, 
+  BetaFeatureFlag, 
+  BetaTooltip 
+} from './beta/BetaBadge'
+export { 
+  OnboardingFlow, 
+  OnboardingTip, 
+  RestartOnboardingButton 
+} from './onboarding/OnboardingFlow'
+export { 
+  EmptyState,
+  EmptyReceipts,
+  EmptySearch,
+  EmptyDocuments,
+  EmptyInbox,
+  EmptyChart,
+  BetaEmptyState,
+} from './empty-states/EmptyStates'
+export {
+  LoadingState,
+  SkeletonCard,
+  SkeletonStats,
+  SkeletonList,
+  SkeletonTable,
+  SkeletonDashboard,
+  SkeletonReceiptCard,
+  SkeletonReceiptGrid,
+  PageLoader,
+  LoadingButtonContent,
+} from './loading/LoadingStates'
+
+// Bank Connection Components (TAL-186)
+export {
+  EnhancedBankSelector,
+  CompactBankSelector,
+  OAuthConsentScreen,
+  ConnectionStatusIndicator,
+  ConnectionList,
+  CompactConnectionStatus,
+  TransactionPreview,
+  MiniTransactionPreview,
+  BankConnectionModal,
+} from './bank-connection'
+export type {
+  ConsentOptions,
+  BankConnection,
+  ConnectionStatus,
+  SyncedTransaction,
+  TransactionPreviewData,
+  ConnectionStep,
+} from './bank-connection'

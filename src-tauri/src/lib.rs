@@ -20,6 +20,8 @@ use tax_report::{
 pub fn run() {
   tauri::Builder::default()
     .plugin(tauri_plugin_fs::init())
+    .plugin(tauri_plugin_sql::Builder::default().build())
+    .plugin(tauri_plugin_http::init())
     .invoke_handler(tauri::generate_handler![
       scan_receipt_ocr,
       validate_ocr_confidence,

@@ -1,60 +1,42 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { TanStackDevtools } from '@tanstack/react-devtools'
+import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import { Toaster } from 'sonner'
 import { TaxYearProvider } from '@/contexts/TaxYearContext'
+import { BetaBanner, FeedbackWidget, OnboardingFlow } from '@/components'
 
-import appCss from '../styles.css?url'
+// Import global styles
+import '../styles.css'
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Tally Desktop - Tax Receipt Management',
-      },
-    ],
-    links: [
-      {
-        rel: 'stylesheet',
-        href: appCss,
-      },
-    ],
-  }),
-
-  shellComponent: RootDocument,
+  component: RootComponent,
 })
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootComponent() {
   return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        <TaxYearProvider>
-          {children}
-        </TaxYearProvider>
-        <Toaster position="top-right" richColors />
-        <TanStackDevtools
-          config={{
-            position: 'bottom-right',
-          }}
-          plugins={[
-            {
-              name: 'Tanstack Router',
-              render: <TanStackRouterDevtoolsPanel />,
-            },
-          ]}
-        />
-        <Scripts />
-      </body>
-    </html>
+    <div className="min-h-screen flex flex-col">
+      <TaxYearProvider>
+        {/* Beta Banner - shown at top of page */}
+        <BetaBanner />
+        
+        {/* Main content */}
+        <div className="flex-1">
+          <Outlet />
+        </div>
+        
+        {/* Feedback Widget - floating action button */}
+        <FeedbackWidget />
+        
+        {/* Onboarding Flow - shown for new users */}
+        <OnboardingFlow />
+      </TaxYearProvider>
+      
+      {/* Toast notifications */}
+      <Toaster position="top-right" richColors />
+      
+      {/* Router devtools in development */}
+      {process.env.NODE_ENV === 'development' && (
+        <TanStackRouterDevtools position="bottom-right" />
+      )}
+    </div>
   )
 }

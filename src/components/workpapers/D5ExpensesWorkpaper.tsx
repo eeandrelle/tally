@@ -19,6 +19,7 @@ import {
   Receipt,
   RotateCcw,
   Save,
+  Search,
   Shield,
   ShoppingBag,
   StickyNote,
@@ -45,7 +46,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import { formatCurrency, formatDate } from '@/lib/utils';
 import { getReceiptsByDateRange, type Receipt as DbReceipt } from '@/lib/db';
 import { useD5Expenses, D5_EXPENSE_TYPES, type D5ExpenseType } from '@/hooks/useD5Expenses';
-import { Search } from 'lucide-react';
 
 interface ReceiptLinkDialogProps {
   isOpen: boolean;

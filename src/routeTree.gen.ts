@@ -57,10 +57,12 @@ import { Route as CategoryBreakdownRouteImport } from './routes/category-breakdo
 import { Route as CategorizationSuggestionsRouteImport } from './routes/categorization-suggestions'
 import { Route as CarExpensesRouteImport } from './routes/car-expenses'
 import { Route as CameraRouteImport } from './routes/camera'
+import { Route as BetaDemoRouteImport } from './routes/beta-demo'
 import { Route as BankStatementsRouteImport } from './routes/bank-statements'
 import { Route as AtoPrefillRouteImport } from './routes/ato-prefill'
 import { Route as AtoCategoriesRouteImport } from './routes/ato-categories'
 import { Route as AnalyticsRouteImport } from './routes/analytics'
+import { Route as AccountantPortalRouteImport } from './routes/accountant-portal'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PortalTokenRouteImport } from './routes/portal.$token'
 
@@ -305,6 +307,11 @@ const CameraRoute = CameraRouteImport.update({
   path: '/camera',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BetaDemoRoute = BetaDemoRouteImport.update({
+  id: '/beta-demo',
+  path: '/beta-demo',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BankStatementsRoute = BankStatementsRouteImport.update({
   id: '/bank-statements',
   path: '/bank-statements',
@@ -325,6 +332,11 @@ const AnalyticsRoute = AnalyticsRouteImport.update({
   path: '/analytics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AccountantPortalRoute = AccountantPortalRouteImport.update({
+  id: '/accountant-portal',
+  path: '/accountant-portal',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -338,10 +350,12 @@ const PortalTokenRoute = PortalTokenRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/accountant-portal': typeof AccountantPortalRoute
   '/analytics': typeof AnalyticsRoute
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
   '/categorization-suggestions': typeof CategorizationSuggestionsRoute
@@ -394,10 +408,12 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/accountant-portal': typeof AccountantPortalRoute
   '/analytics': typeof AnalyticsRoute
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
   '/categorization-suggestions': typeof CategorizationSuggestionsRoute
@@ -451,10 +467,12 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/accountant-portal': typeof AccountantPortalRoute
   '/analytics': typeof AnalyticsRoute
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
   '/categorization-suggestions': typeof CategorizationSuggestionsRoute
@@ -509,10 +527,12 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/accountant-portal'
     | '/analytics'
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/beta-demo'
     | '/camera'
     | '/car-expenses'
     | '/categorization-suggestions'
@@ -565,10 +585,12 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/accountant-portal'
     | '/analytics'
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/beta-demo'
     | '/camera'
     | '/car-expenses'
     | '/categorization-suggestions'
@@ -621,10 +643,12 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/accountant-portal'
     | '/analytics'
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/beta-demo'
     | '/camera'
     | '/car-expenses'
     | '/categorization-suggestions'
@@ -678,10 +702,12 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccountantPortalRoute: typeof AccountantPortalRoute
   AnalyticsRoute: typeof AnalyticsRoute
   AtoCategoriesRoute: typeof AtoCategoriesRoute
   AtoPrefillRoute: typeof AtoPrefillRoute
   BankStatementsRoute: typeof BankStatementsRoute
+  BetaDemoRoute: typeof BetaDemoRoute
   CameraRoute: typeof CameraRoute
   CarExpensesRoute: typeof CarExpensesRoute
   CategorizationSuggestionsRoute: typeof CategorizationSuggestionsRoute
@@ -1071,6 +1097,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CameraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/beta-demo': {
+      id: '/beta-demo'
+      path: '/beta-demo'
+      fullPath: '/beta-demo'
+      preLoaderRoute: typeof BetaDemoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bank-statements': {
       id: '/bank-statements'
       path: '/bank-statements'
@@ -1099,6 +1132,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AnalyticsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/accountant-portal': {
+      id: '/accountant-portal'
+      path: '/accountant-portal'
+      fullPath: '/accountant-portal'
+      preLoaderRoute: typeof AccountantPortalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -1118,10 +1158,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccountantPortalRoute: AccountantPortalRoute,
   AnalyticsRoute: AnalyticsRoute,
   AtoCategoriesRoute: AtoCategoriesRoute,
   AtoPrefillRoute: AtoPrefillRoute,
   BankStatementsRoute: BankStatementsRoute,
+  BetaDemoRoute: BetaDemoRoute,
   CameraRoute: CameraRoute,
   CarExpensesRoute: CarExpensesRoute,
   CategorizationSuggestionsRoute: CategorizationSuggestionsRoute,
@@ -1175,12 +1217,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { createStart } from '@tanstack/react-start'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-  }
-}

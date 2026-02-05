@@ -31,7 +31,8 @@ import {
   ShieldCheck,
   FolderOpen,
   Bell,
-  Library
+  Library,
+  Briefcase
 } from "lucide-react";
 import { OcrScanButton } from "@/components/OcrScanButton";
 import { TaxYearSelector } from "@/components/TaxYearSelector";
@@ -48,7 +49,13 @@ import {
   getReviewStatusCounts,
   getReceiptsNeedingReview
 } from "@/lib/db";
-import { ReviewStatusBadge } from "@/components/ReviewStatusBadge";
+import { 
+  ReviewStatusBadge,
+  EmptyReceipts,
+  EmptyChart,
+  SkeletonList,
+  SkeletonStats,
+} from "@/components";
 import { ReportGeneratorCard } from "@/components/tax-report/ReportGeneratorCard";
 import { ReviewStatusDialog } from "@/components/ReviewStatusDialog";
 import { PDFExportDialog } from "@/components/PDFExportDialog";
@@ -365,27 +372,12 @@ function DashboardPage() {
               </CardHeader>
               <CardContent>
                 {isLoading ? (
-                  <div className="space-y-4">
-                    {Array.from({ length: 3 }).map((_, i) => (
-                      <div
-                        key={i}
-                        className="h-16 bg-muted animate-pulse rounded-lg"
-                      />
-                    ))}
-                  </div>
+                  <SkeletonList rows={3} hasAvatar={false} />
                 ) : receipts.length === 0 ? (
-                  <div className="text-center py-12">
-                    <div className="bg-muted w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Camera className="h-8 w-8 text-muted-foreground" />
-                    </div>
-                    <h3 className="text-lg font-medium mb-2">No receipts yet</h3>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      {isViewingCurrentYear 
-                        ? "Scan your first receipt to get started"
-                        : `No receipts found for FY ${formatYear(selectedYear)}`}
-                    </p>
-                    {isViewingCurrentYear && <OcrScanButton onReceiptCreated={loadData} />}
-                  </div>
+                  <EmptyReceipts 
+                    onAddReceipt={() => {}}
+                    className="py-8"
+                  />
                 ) : (
                   <div className="space-y-3">
                     {receipts.map((receipt) => (
@@ -453,9 +445,11 @@ function DashboardPage() {
                     ))}
                   </div>
                 ) : categories.length === 0 ? (
-                  <p className="text-center text-muted-foreground py-8">
-                    No data for FY {formatYear(selectedYear)}
-                  </p>
+                  <EmptyChart 
+                    title="No spending data"
+                    description="Add receipts to see your spending breakdown by category."
+                    className="py-6"
+                  />
                 ) : (
                   <div className="space-y-4">
                     {categories.map((cat) => {
