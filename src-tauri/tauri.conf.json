@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "Tally",
+  "productName": "Tally Desktop",
   "version": "1.0.0",
   "identifier": "com.tally.desktop",
   "build": {
@@ -12,7 +12,7 @@
   "app": {
     "windows": [
       {
-        "title": "Tally",
+        "title": "Tally Desktop",
         "width": 1400,
         "height": 900,
         "minWidth": 1024,
@@ -55,7 +55,7 @@
     "category": "Finance",
     "shortDescription": "Australian Tax Receipt Management",
     "longDescription": "Tally helps Australian taxpayers track receipts, manage deductions, and prepare tax returns with ATO-compliant workpapers.",
-    "publisher": "Tally",
+    "publisher": "Tally Desktop",
     "copyright": "© 2025 Tally"
   },
   "plugins": {

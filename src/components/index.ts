@@ -112,3 +112,7 @@ export type {
 
 // Layout components
 export { AppShell, useAppShell, Breadcrumbs, PageHeader } from './layout'
+
+// Quiz Components
+export { SoleTraderQuiz, SmartDashboard } from './onboarding'
+export type { SoleTraderProfile } from './onboarding'

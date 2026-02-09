@@ -58,6 +58,7 @@ import { Route as CategorizationSuggestionsRouteImport } from './routes/categori
 import { Route as CarExpensesRouteImport } from './routes/car-expenses'
 import { Route as CameraRouteImport } from './routes/camera'
 import { Route as BetaDemoRouteImport } from './routes/beta-demo'
+import { Route as BasWorkflowRouteImport } from './routes/bas-workflow'
 import { Route as BankStatementsRouteImport } from './routes/bank-statements'
 import { Route as AtoPrefillRouteImport } from './routes/ato-prefill'
 import { Route as AtoCategoriesRouteImport } from './routes/ato-categories'
@@ -312,6 +313,11 @@ const BetaDemoRoute = BetaDemoRouteImport.update({
   path: '/beta-demo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BasWorkflowRoute = BasWorkflowRouteImport.update({
+  id: '/bas-workflow',
+  path: '/bas-workflow',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BankStatementsRoute = BankStatementsRouteImport.update({
   id: '/bank-statements',
   path: '/bank-statements',
@@ -355,6 +361,7 @@ export interface FileRoutesByFullPath {
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/bas-workflow': typeof BasWorkflowRoute
   '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
@@ -413,6 +420,7 @@ export interface FileRoutesByTo {
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/bas-workflow': typeof BasWorkflowRoute
   '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
@@ -472,6 +480,7 @@ export interface FileRoutesById {
   '/ato-categories': typeof AtoCategoriesRoute
   '/ato-prefill': typeof AtoPrefillRoute
   '/bank-statements': typeof BankStatementsRoute
+  '/bas-workflow': typeof BasWorkflowRoute
   '/beta-demo': typeof BetaDemoRoute
   '/camera': typeof CameraRoute
   '/car-expenses': typeof CarExpensesRoute
@@ -532,6 +541,7 @@ export interface FileRouteTypes {
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/bas-workflow'
     | '/beta-demo'
     | '/camera'
     | '/car-expenses'
@@ -590,6 +600,7 @@ export interface FileRouteTypes {
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/bas-workflow'
     | '/beta-demo'
     | '/camera'
     | '/car-expenses'
@@ -648,6 +659,7 @@ export interface FileRouteTypes {
     | '/ato-categories'
     | '/ato-prefill'
     | '/bank-statements'
+    | '/bas-workflow'
     | '/beta-demo'
     | '/camera'
     | '/car-expenses'
@@ -707,6 +719,7 @@ export interface RootRouteChildren {
   AtoCategoriesRoute: typeof AtoCategoriesRoute
   AtoPrefillRoute: typeof AtoPrefillRoute
   BankStatementsRoute: typeof BankStatementsRoute
+  BasWorkflowRoute: typeof BasWorkflowRoute
   BetaDemoRoute: typeof BetaDemoRoute
   CameraRoute: typeof CameraRoute
   CarExpensesRoute: typeof CarExpensesRoute
@@ -1104,6 +1117,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BetaDemoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bas-workflow': {
+      id: '/bas-workflow'
+      path: '/bas-workflow'
+      fullPath: '/bas-workflow'
+      preLoaderRoute: typeof BasWorkflowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bank-statements': {
       id: '/bank-statements'
       path: '/bank-statements'
@@ -1163,6 +1183,7 @@ const rootRouteChildren: RootRouteChildren = {
   AtoCategoriesRoute: AtoCategoriesRoute,
   AtoPrefillRoute: AtoPrefillRoute,
   BankStatementsRoute: BankStatementsRoute,
+  BasWorkflowRoute: BasWorkflowRoute,
   BetaDemoRoute: BetaDemoRoute,
   CameraRoute: CameraRoute,
   CarExpensesRoute: CarExpensesRoute,
